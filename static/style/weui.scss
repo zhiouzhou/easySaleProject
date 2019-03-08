@@ -1,0 +1,138 @@
+$color-primary: #0096ff;
+
+::-webkit-input-placeholder { /* WebKit browsers */
+  color:#ccc;
+  opacity:0.8;
+}
+
+.mint-header {
+  background-color: $color-primary;
+}
+.mint-button:not(.is-disabled):active::after {
+  opacity: .2 /* .6 */
+}
+.mint-button--primary {
+  background-color: $color-primary;
+}
+.mint-button--primary.is-plain {
+  border: 1px solid $color-primary;
+  color: $color-primary
+}
+.mint-badge.is-primary {
+  background-color: $color-primary
+}
+.mint-switch-input:checked + .mint-switch-core {
+  border-color: $color-primary;
+  background-color: $color-primary;
+}
+.mint-navbar .mint-tab-item.is-selected {
+  border-bottom: 3px solid $color-primary;
+  color: $color-primary;
+}
+.mint-tabbar > .mint-tab-item.is-selected {
+  color: $color-primary;
+}
+.mint-searchbar-cancel {
+  color: $color-primary;
+}
+.mint-checkbox-input:checked + .mint-checkbox-core {
+  background-color: $color-primary;
+  border-color: $color-primary;
+}
+.mint-radio-input:checked + .mint-radio-core {
+  background-color: $color-primary;
+  border-color: $color-primary;
+}
+.mt-range-progress {
+  background-color: $color-primary;
+}
+.mt-progress-progress {
+  background-color: $color-primary;
+}
+.mint-msgbox-confirm {
+  color: $color-primary;
+}
+.mint-msgbox-confirm:active {
+  color: $color-primary;
+}
+.mint-datetime-action {
+  color: $color-primary;
+}
+
+.main, .page {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  margin: 0 auto;
+  overflow-y: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+/*这里是重点*/
+.warn-highlight {
+  -webkit-animation: glow 500ms ease-out 6 alternate;
+  -moz-animation: glow 500ms ease-out 6 alternate;
+  -o-animation: glow 500ms ease-out 6 alternate;
+  -ms-animation: glow 500ms ease-out 6 alternate;
+  /*这里使用了呼吸动画*/
+  animation: glow 500ms ease-out 6 alternate;
+  //background: #222922;
+  //background: -webkit-linear-gradient(#333933, #222922);
+  //background: -moz-linear-gradient(#333933, #222922);
+  //background: -o-linear-gradient(#333933, #222922);
+  //background: -ms-linear-gradient(#333933, #222922);
+  //background: linear-gradient(#333933, #222922);
+  border-color: #0096ff;
+  //box-shadow: 0 0 5px rgba(0,255,0,.2), inset 0 0 5px rgba(0,255,0,.1), 0 2px 0 #000;
+  //color: #efe;
+  outline: none;
+}
+
+/*以下定义动画帧*/
+@-webkit-keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255,0,0,.2), inset 0 0 5px rgba(255,0,0,.1), 0 0 0 #000;
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255,0,0,.9), inset 0 0 10px rgba(255,0,0,.5), 0 0 0 #000;
+  }
+}
+
+@-moz-keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255,0,0,.2), inset 0 0 5px rgba(255,0,0,.1), 0 0 0 #000;
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255,0,0,.9), inset 0 0 10px rgba(255,0,0,.5), 0 0 0 #000;
+  }
+}
+
+@-o-keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255,0,0,.2), inset 0 0 5px rgba(255,0,0,.1), 0 0 0 #000;
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255,0,0,.9), inset 0 0 10px rgba(255,0,0,.5), 0 0 0 #000;
+  }
+}
+
+@-ms-keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255,0,0,.2), inset 0 0 5px rgba(255,0,0,.1), 0 0 0 #000;
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255,0,0,.9), inset 0 0 10px rgba(255,0,0,.5), 0 0 0 #000;
+  }
+}
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(255,0,0,.2), inset 0 0 5px rgba(255,0,0,.1), 0 0 0 #000;
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255,0,0,.9), inset 0 0 10px rgba(255,0,0,.5), 0 0 0 #000;
+  }
+}

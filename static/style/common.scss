@@ -1,0 +1,21 @@
+@mixin bgPosition($spriteWidth, $spriteHeight, $iconWidth, $iconHeight, $iconX, $iconY){
+    background-position: (($iconX / ($spriteWidth - $iconWidth)) * 100% ($iconY / ($spriteHeight - $iconHeight)) * 100%);
+    background-size: (($spriteWidth / $iconWidth) * 100% auto);
+}
+
+@mixin bgPositionSameSprite-tow($iconWidth, $iconHeight, $iconX, $iconY){
+  $spriteWidth : 181;
+  $spriteHeight : 9964;
+  @include bgPosition($spriteWidth, $spriteHeight, $iconWidth, $iconHeight, $iconX, $iconY);
+}
+
+@mixin bgPositonSameSize($iconSize, $iconY) {
+	$iconWidth : $iconSize;
+	$iconHeight : $iconSize;
+	$iconX : 0;
+	@include bgPositionSameSprite-tow($iconWidth, $iconHeight, $iconX, $iconY);
+}
+
+@mixin setWidthToRem($px){
+  width: ($px/75)rem;
+}
