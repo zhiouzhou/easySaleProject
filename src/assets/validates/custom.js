@@ -136,7 +136,7 @@ const custom_dict = {
       number: '条形码只能是整型数字'
     },
     code: {
-      number: '箱码只能是整型数字'
+      number: '箱码只能是整型数字 '
     },
 
   },
